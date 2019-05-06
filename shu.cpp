@@ -38,11 +38,14 @@ void encode(char *input, char *output, int len) {
 	}
 	in.close();
 	out.close();
+	
 }
 
 int main(int argc, char *argv[]) {
+	
 	int len;
 	len = count(argv[1]);
 	encode(argv[1],argv[2],len);
 	return 0;
+	
 }
