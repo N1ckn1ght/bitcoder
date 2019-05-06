@@ -19,6 +19,7 @@ int count(char *input) {
 }
 
 void decode(char *input, char *output, int len) {
+	
 	int ch;
 	int encoded;
 	int buf[7];
@@ -43,11 +44,14 @@ void decode(char *input, char *output, int len) {
 	}
 	in.close();
 	out.close();
+	
 }
 
 int main(int argc, char *argv[]) {
+	
 	int len;
 	len = count(argv[1]);
 	decode(argv[1], argv[2], len);
 	return 0;
+	
 }
