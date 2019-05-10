@@ -58,7 +58,9 @@ void encode(char *input, char *output, char *key, int len) {
                 //cout << "(DEBUG) i = " << i << "; len = " << len << endl;
                 ch = in.get();
                 if (!in.eof()) {
+			ch = ch ^ key[x%5];
                         out.put((char)ch);
+			x++;
                 }
 	}
 
@@ -105,7 +107,9 @@ void decode(char *input, char *output, char *key, int len) {
 		//cout << "(DEBUG) i = " << i << "; len = " << len << endl;
 		ch = in.get();
 		if (!in.eof()) {
+			ch = ch ^ key[x%5];
 			out.put((char)ch);
+			x++;
 		}
 	}
 
